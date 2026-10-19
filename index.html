@@ -319,10 +319,10 @@
   </div>
 
   <script>
-    // Coloca la URL obtenida al desplegar el Google Apps Script
+    // REEMPLAZA ESTA URL CON TU URL REAL DE GOOGLE APPS SCRIPT
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbypxLt_8qleqhRhEzQFaiwBox5iCkUBHh8Ds-VEQ9GPmQAlhPHab4Elsd7owSzCvZyX/exec";
 
-    document.getElementById('formNoco').addEventListener('submit', async function(e) {
+    document.getElementById('formNoco').addEventListener('submit', function(e) {
       e.preventDefault();
       
       const btn = document.getElementById('btnEnviar');
@@ -333,67 +333,69 @@
       msg.classList.add('hidden');
 
       const payload = {
-        oficinaJudicial: document.getElementById('oficinaJudicial').value,
-        subsedeOrigen: document.getElementById('subsedeOrigen').value,
-        organoJurisdiccional: document.getElementById('organoJurisdiccional').value,
-        nCarpetaJudicial: document.getElementById('nCarpetaJudicial').value,
-        idCaso: document.getElementById('idCaso').value,
-        nLegajoSolicitudAudiencia: document.getElementById('nLegajoSolicitudAudiencia').value,
-        solicitante: document.getElementById('solicitante').value,
-        fechaSolicitud: document.getElementById('fechaSolicitud').value,
-        horaSolicitud: document.getElementById('horaSolicitud').value,
-        caratula: document.getElementById('caratula').value,
-        tipoAudienciaAgendada: document.getElementById('tipoAudienciaAgendada').value,
-        fechaAgendamiento: document.getElementById('fechaAgendamiento').value,
-        horarioProgramado: document.getElementById('horarioProgramado').value,
-        estadioProcesalCaso: document.getElementById('estadioProcesalCaso').value,
-        tipoAudienciaRealizada: document.getElementById('tipoAudienciaRealizada').value,
-        fechaAudiencia: document.getElementById('fechaAudiencia').value,
-        horarioInicio: document.getElementById('horarioInicio').value,
-        horarioFinalizacion: document.getElementById('horarioFinalizacion').value,
-        duracionMinutos: document.getElementById('duracionMinutos').value,
-        cuartoIntermedio: document.getElementById('cuartoIntermedio').value,
-        efectividadAudienciaRealizada: document.getElementById('efectividadAudienciaRealizada').value,
-        estadoAudiencia: document.getElementById('estadoAudiencia').value,
-        motivoCancelacion: document.getElementById('motivoCancelacion').value,
-        nombreJuez: document.getElementById('nombreJuez').value,
-        juezSubrogante: document.getElementById('juezSubrogante').value,
-        observaciones1: document.getElementById('observaciones1').value,
-        observaciones2: document.getElementById('observaciones2').value,
-        coordinador: document.getElementById('coordinador').value,
-        gestor: document.getElementById('gestor').value,
-        operador: document.getElementById('operador').value,
-        limitePlazos: document.getElementById('limitePlazos').value,
-        razones: document.getElementById('razones').value,
-        fechaComision1: document.getElementById('fechaComision1').value,
-        fechaComision2: document.getElementById('fechaComision2').value,
-        detenidosEnPris: document.getElementById('detenidosEnPris').value,
-        tiempoDefensa: document.getElementById('tiempoDefensa').value,
-        tiempoFiscalia: document.getElementById('tiempoFiscalia').value,
-        tiempoJuez: document.getElementById('tiempoJuez').value,
-        cargadoPor: document.getElementById('cargadoPor').value
+        oficinaJudicial: document.getElementById('oficinaJudicial') ? document.getElementById('oficinaJudicial').value : '',
+        subsedeOrigen: document.getElementById('subsedeOrigen') ? document.getElementById('subsedeOrigen').value : '',
+        organoJurisdiccional: document.getElementById('organoJurisdiccional') ? document.getElementById('organoJurisdiccional').value : '',
+        nCarpetaJudicial: document.getElementById('nCarpetaJudicial') ? document.getElementById('nCarpetaJudicial').value : '',
+        idCaso: document.getElementById('idCaso') ? document.getElementById('idCaso').value : '',
+        nLegajoSolicitudAudiencia: document.getElementById('nLegajoSolicitudAudiencia') ? document.getElementById('nLegajoSolicitudAudiencia').value : '',
+        solicitante: document.getElementById('solicitante') ? document.getElementById('solicitante').value : '',
+        fechaSolicitud: document.getElementById('fechaSolicitud') ? document.getElementById('fechaSolicitud').value : '',
+        horaSolicitud: document.getElementById('horaSolicitud') ? document.getElementById('horaSolicitud').value : '',
+        caratula: document.getElementById('caratula') ? document.getElementById('caratula').value : '',
+        tipoAudienciaAgendada: document.getElementById('tipoAudienciaAgendada') ? document.getElementById('tipoAudienciaAgendada').value : '',
+        fechaAgendamiento: document.getElementById('fechaAgendamiento') ? document.getElementById('fechaAgendamiento').value : '',
+        horarioProgramado: document.getElementById('horarioProgramado') ? document.getElementById('horarioProgramado').value : '',
+        estadioProcesalCaso: document.getElementById('estadioProcesalCaso') ? document.getElementById('estadioProcesalCaso').value : '',
+        tipoAudienciaRealizada: document.getElementById('tipoAudienciaRealizada') ? document.getElementById('tipoAudienciaRealizada').value : '',
+        fechaAudiencia: document.getElementById('fechaAudiencia') ? document.getElementById('fechaAudiencia').value : '',
+        horarioInicio: document.getElementById('horarioInicio') ? document.getElementById('horarioInicio').value : '',
+        horarioFinalizacion: document.getElementById('horarioFinalizacion') ? document.getElementById('horarioFinalizacion').value : '',
+        duracionMinutos: document.getElementById('duracionMinutos') ? document.getElementById('duracionMinutos').value : '',
+        cuartoIntermedio: document.getElementById('cuartoIntermedio') ? document.getElementById('cuartoIntermedio').value : '',
+        efectividadAudienciaRealizada: document.getElementById('efectividadAudienciaRealizada') ? document.getElementById('efectividadAudienciaRealizada').value : '',
+        estadoAudiencia: document.getElementById('estadoAudiencia') ? document.getElementById('estadoAudiencia').value : '',
+        motivoCancelacion: document.getElementById('motivoCancelacion') ? document.getElementById('motivoCancelacion').value : '',
+        nombreJuez: document.getElementById('nombreJuez') ? document.getElementById('nombreJuez').value : '',
+        juezSubrogante: document.getElementById('juezSubrogante') ? document.getElementById('juezSubrogante').value : '',
+        observaciones1: document.getElementById('observaciones1') ? document.getElementById('observaciones1').value : '',
+        observaciones2: document.getElementById('observaciones2') ? document.getElementById('observaciones2').value : '',
+        coordinador: document.getElementById('coordinador') ? document.getElementById('coordinador').value : '',
+        gestor: document.getElementById('gestor') ? document.getElementById('gestor').value : '',
+        operador: document.getElementById('operador') ? document.getElementById('operador').value : '',
+        limitePlazos: document.getElementById('limitePlazos') ? document.getElementById('limitePlazos').value : '',
+        razones: document.getElementById('razones') ? document.getElementById('razones').value : '',
+        fechaComision1: document.getElementById('fechaComision1') ? document.getElementById('fechaComision1').value : '',
+        fechaComision2: document.getElementById('fechaComision2') ? document.getElementById('fechaComision2').value : '',
+        detenidosEnPris: document.getElementById('detenidosEnPris') ? document.getElementById('detenidosEnPris').value : '',
+        tiempoDefensa: document.getElementById('tiempoDefensa') ? document.getElementById('tiempoDefensa').value : '',
+        tiempoFiscalia: document.getElementById('tiempoFiscalia') ? document.getElementById('tiempoFiscalia').value : '',
+        tiempoJuez: document.getElementById('tiempoJuez') ? document.getElementById('tiempoJuez').value : '',
+        cargadoPor: document.getElementById('cargadoPor') ? document.getElementById('cargadoPor').value : ''
       };
 
-      try {
-        await fetch("https://script.google.com/macros/s/AKfycbypxLt_8qleqhRhEzQFaiwBox5iCkUBHh8Ds-VEQ9GPmQAlhPHab4Elsd7owSzCvZyX/exec", {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-
-        msg.textContent = "¡Formulario guardado con éxito en Excel/Sheets!";
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(function() {
+        msg.textContent = "¡Formulario enviado y registrado con éxito!";
         msg.className = "mt-4 p-3 bg-green-900 text-green-200 rounded text-center text-sm font-semibold";
-        document.getElementById('formNoco').reset();
-
-      } catch (err) {
-        msg.textContent = "Error al enviar el formulario. Verifica la conexión.";
-        msg.className = "mt-4 p-3 bg-red-900 text-red-200 rounded text-center text-sm font-semibold";
-      } finally {
         msg.classList.remove('hidden');
+        document.getElementById('formNoco').reset();
+      })
+      .catch(function(err) {
+        console.error("Error:", err);
+        msg.textContent = "Ocurrió un error al enviar. Revisa la consola.";
+        msg.className = "mt-4 p-3 bg-red-900 text-red-200 rounded text-center text-sm font-semibold";
+        msg.classList.remove('hidden');
+      })
+      .finally(function() {
         btn.disabled = false;
         btn.textContent = "Enviar";
-      }
+      });
     });
   </script>
 </body>
