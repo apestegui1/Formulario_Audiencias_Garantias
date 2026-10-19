@@ -320,7 +320,7 @@
 
   <script>
     // Coloca la URL obtenida al desplegar el Google Apps Script
-    const SCRIPT_URL = https://script.google.com/macros/s/AKfycbypxLt_8qleqhRhEzQFaiwBox5iCkUBHh8Ds-VEQ9GPmQAlhPHab4Elsd7owSzCvZyX/exec;
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbypxLt_8qleqhRhEzQFaiwBox5iCkUBHh8Ds-VEQ9GPmQAlhPHab4Elsd7owSzCvZyX/exec";
 
     document.getElementById('formNoco').addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -375,7 +375,7 @@
       };
 
       try {
-        await fetch(https://script.google.com/macros/s/AKfycbypxLt_8qleqhRhEzQFaiwBox5iCkUBHh8Ds-VEQ9GPmQAlhPHab4Elsd7owSzCvZyX/exec, {
+        await fetch("https://script.google.com/macros/s/AKfycbypxLt_8qleqhRhEzQFaiwBox5iCkUBHh8Ds-VEQ9GPmQAlhPHab4Elsd7owSzCvZyX/exec", {
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/json' },
