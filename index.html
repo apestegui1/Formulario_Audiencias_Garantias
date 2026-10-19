@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Gestión de Audiencias - Etapa Garantías</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #121316; color: #e5e7eb; }
+    .input-dark {
+      background-color: #2a2d34;
+      border: 1px solid #3f444e;
+      color: #ffffff;
+      border-radius: 0.375rem;
+      padding: 0.5rem 0.75rem;
+      width: 100%;
+    }
+    .input-dark:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+    }
+    .label-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+    .help-text {
+      font-size: 0.7rem;
+      color: #6b7280;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+  </style>
+</head>
+<body class="py-6 px-3 min-h-screen flex justify-center">
+
+  <div class="w-full max-w-xl bg-[#1a1c23] p-6 rounded-lg shadow-xl border border-[#2d3139]">
+    
+    <!-- Encabezado con Logo y Título -->
+    <div class="text-center border-b border-gray-700 pb-4 mb-6">
+      <h3 class="text-xs tracking-widest font-bold text-gray-400 uppercase">OFICINA JUDICIAL</h3>
+      <h4 class="text-xs tracking-widest text-gray-500 uppercase">DISTRITO MISIONES</h4>
+      <h1 class="text-lg font-bold text-white mt-4 uppercase tracking-wide">FORMULARIO DE GESTIÓN DE AUDIENCIAS - ETAPA GARANTÍAS</h1>
+    </div>
+
+    <form id="formNoco" class="space-y-4">
+
+      <div>
+        <label class="label-title">OFICINA JUDICIAL</label>
+        <input type="text" id="oficinaJudicial" value="OFIJU MISIONES" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">SUBSEDE ORIGEN</label>
+        <select id="subsedeOrigen" class="input-dark">
+          <option value="">Seleccionar...</option>
+          <option value="Posadas">Posadas</option>
+          <option value="Oberá">Oberá</option>
+          <option value="Eldorado">Eldorado</option>
+          <option value="Puerto Iguazú">Puerto Iguazú</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">ORGANO_JURISDICCIONAL</label>
+        <select id="organoJurisdiccional" class="input-dark">
+          <option value="">Seleccionar...</option>
+          <option value="Juzgado de Garantías 1">Juzgado de Garantías 1</option>
+          <option value="Juzgado de Garantías 2">Juzgado de Garantías 2</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">Nº_CARPETA_JUDICIAL</label>
+        <span class="help-text">Cargar como figura en Lex100. Ejemplo: FPO 1985/2026</span>
+        <input type="text" id="nCarpetaJudicial" placeholder="FPO 1985/2026" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">ID_CASO</label>
+        <span class="help-text">Ejemplo: FPO 1985/2026-1</span>
+        <input type="text" id="idCaso" placeholder="FPO 1985/2026-1" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">Nº_LEGAJO_SOLICITUD_AUDIENCIA</label>
+        <span class="help-text">Identificador asignado por SGJ (Lex100) a la petición de audiencia. Ej: FPO 1985/2026/2</span>
+        <input type="text" id="nLegajoSolicitudAudiencia" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">SOLICITANTE</label>
+        <select id="solicitante" class="input-dark">
+          <option value="">Seleccionar...</option>
+          <option value="Fiscalía">Fiscalía</option>
+          <option value="Defensa">Defensa</option>
+          <option value="Querella">Querella</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">FECHA_SOLICITUD</label>
+        <input type="date" id="fechaSolicitud" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">HORA_SOLICITUD</label>
+        <input type="time" id="horaSolicitud" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">CARATULA</label>
+        <span class="help-text">Completar como figura en SGJ (Lex100)</span>
+        <input type="text" id="caratula" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">TIPO_AUDIENCIA_AGENDADA</label>
+        <select id="tipoAudienciaAgendada" class="input-dark">
+          <option value="">Seleccionar...</option>
+          <option value="Formalización">Formalización</option>
+          <option value="Prisión Preventiva">Prisión Preventiva</option>
+          <option value="Revisión de Medida">Revisión de Medida</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">FECHA_AGENDAMIENTO</label>
+        <input type="date" id="fechaAgendamiento" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">HORARIO_PROGRAMADO</label>
+        <input type="time" id="horarioProgramado" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">ESTADIO_PROCESAL_CASO</label>
+        <select id="estadioProcesalCaso" class="input-dark">
+          <option value="">Seleccionar...</option>
+          <option value="Investigación Penal Preparatoria">Investigación Penal Preparatoria</option>
+          <option value="Etapa Intermedia">Etapa Intermedia</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">TIPO_AUDIENCIA_REALIZADA/CANCELADA/REPROGRAMADA</label>
+        <select id="tipoAudienciaRealizada" class="input-dark">
+          <option value="">Seleccionar...</option>
+          <option value="Realizada">Realizada</option>
+          <option value="Cancelada">Cancelada</option>
+          <option value="Reprogramada">Reprogramada</option>
+          <option value="Suspendida">Suspendida</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">FECHA_AUDIENCIA</label>
+        <input type="date" id="fechaAudiencia" class="input-dark">
+      </div>
+
+      <div class="grid grid-cols-2 gap-2">
+        <div>
+          <label class="label-title">HORARIO_INICIO</label>
+          <input type="time" id="horarioInicio" class="input-dark">
+        </div>
+        <div>
+          <label class="label-title">HORARIO_FINALIZACION</label>
+          <input type="time" id="horarioFinalizacion" class="input-dark">
+        </div>
+      </div>
+
+      <div>
+        <label class="label-title">DURACIÓN (EN MINUTOS)</label>
+        <span class="help-text">Ej: HORARIO_INICIO= 10:00 y HORARIO_FINALIZACION= 11:15, DURACION= 75</span>
+        <input type="number" id="duracionMinutos" placeholder="75" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">CUARTO_INTERMEDIO</label>
+        <input type="text" id="cuartoIntermedio" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">EFECTIVIDAD_AUDIENCIA_REALIZADA</label>
+        <select id="efectividadAudienciaRealizada" class="input-dark">
+          <option value="">Seleccionar...</option>
+          <option value="Efectiva">Efectiva</option>
+          <option value="Inefectiva">Inefectiva</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">ESTADO_AUDIENCIA</label>
+        <select id="estadoAudiencia" class="input-dark">
+          <option value="">Seleccionar...</option>
+          <option value="Concluida">Concluida</option>
+          <option value="Pendiente">Pendiente</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">MOTIVO_CANCELACIÓN_REPROGRAMACIÓN_SUSPENSIÓN</label>
+        <select id="motivoCancelacion" class="input-dark">
+          <option value="">Seleccionar...</option>
+          <option value="Inasistencia de las partes">Inasistencia de las partes</option>
+          <option value="Problemas técnicos">Problemas técnicos</option>
+          <option value="Solicitud de la defensa">Solicitud de la defensa</option>
+          <option value="Solicitud de la fiscalía">Solicitud de la fiscalía</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">NOMBRE JUEZ/A DE LA AUDIENCIA</label>
+        <input type="text" id="nombreJuez" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">JUEZ/A SUBROGANTE/SUSTITUTO DE LA AUDIENCIA</label>
+        <input type="text" id="juezSubrogante" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">OBSERVACIONES</label>
+        <textarea id="observaciones1" rows="2" class="input-dark"></textarea>
+      </div>
+
+      <div>
+        <label class="label-title">OBSERVACIONES</label>
+        <textarea id="observaciones2" rows="2" class="input-dark"></textarea>
+      </div>
+
+      <div>
+        <label class="label-title">COORDINADOR</label>
+        <select id="coordinador" class="input-dark">
+          <option value="">Seleccionar...</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">GESTOR</label>
+        <select id="gestor" class="input-dark">
+          <option value="">Seleccionar...</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">OPERADOR</label>
+        <select id="operador" class="input-dark">
+          <option value="">Seleccionar...</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label-title">LIMITE_PLAZOS</label>
+        <input type="date" id="limitePlazos" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">RAZONES</label>
+        <span class="help-text">Explicar brevemente la razón del plazo. Ej: "prisión preventiva"</span>
+        <textarea id="razones" rows="2" class="input-dark"></textarea>
+      </div>
+
+      <div>
+        <label class="label-title">FECHA_COMISION</label>
+        <input type="date" id="fechaComision1" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">FECHA_COMISION</label>
+        <input type="date" id="fechaComision2" class="input-dark">
+      </div>
+
+      <div>
+        <label class="label-title">DETENIDOS_enPrio</label>
+        <select id="detenidosEnPris" class="input-dark">
+          <option value="">Seleccionar...</option>
+          <option value="SI">SI</option>
+          <option value="NO">NO</option>
+        </select>
+      </div>
+
+      <div class="grid grid-cols-3 gap-2">
+        <div>
+          <label class="label-title">TIEMPO_DEFENSA</label>
+          <input type="text" id="tiempoDefensa" placeholder="minutos" class="input-dark">
+        </div>
+        <div>
+          <label class="label-title">TIEMPO_FISCALIA</label>
+          <input type="text" id="tiempoFiscalia" placeholder="minutos" class="input-dark">
+        </div>
+        <div>
+          <label class="label-title">TIEMPO_JUEZ</label>
+          <input type="text" id="tiempoJuez" placeholder="minutos" class="input-dark">
+        </div>
+      </div>
+
+      <div>
+        <label class="label-title">CARGADO_POR</label>
+        <input type="text" id="cargadoPor" class="input-dark">
+      </div>
+
+      <div class="pt-4">
+        <button type="submit" id="btnEnviar" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-md transition duration-200">
+          Enviar
+        </button>
+      </div>
+
+    </form>
+
+    <div id="statusMsg" class="mt-4 p-3 hidden rounded text-center text-sm font-semibold"></div>
+
+  </div>
+
+  <script>
+    // Coloca la URL obtenida al desplegar el Google Apps Script
+    const SCRIPT_URL = "https://script.google.com/macros/s/TU_SCRIPT_ID_AQUI/exec";
+
+    document.getElementById('formNoco').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const btn = document.getElementById('btnEnviar');
+      const msg = document.getElementById('statusMsg');
+      
+      btn.disabled = true;
+      btn.textContent = "Enviando...";
+      msg.classList.add('hidden');
+
+      const payload = {
+        oficinaJudicial: document.getElementById('oficinaJudicial').value,
+        subsedeOrigen: document.getElementById('subsedeOrigen').value,
+        organoJurisdiccional: document.getElementById('organoJurisdiccional').value,
+        nCarpetaJudicial: document.getElementById('nCarpetaJudicial').value,
+        idCaso: document.getElementById('idCaso').value,
+        nLegajoSolicitudAudiencia: document.getElementById('nLegajoSolicitudAudiencia').value,
+        solicitante: document.getElementById('solicitante').value,
+        fechaSolicitud: document.getElementById('fechaSolicitud').value,
+        horaSolicitud: document.getElementById('horaSolicitud').value,
+        caratula: document.getElementById('caratula').value,
+        tipoAudienciaAgendada: document.getElementById('tipoAudienciaAgendada').value,
+        fechaAgendamiento: document.getElementById('fechaAgendamiento').value,
+        horarioProgramado: document.getElementById('horarioProgramado').value,
+        estadioProcesalCaso: document.getElementById('estadioProcesalCaso').value,
+        tipoAudienciaRealizada: document.getElementById('tipoAudienciaRealizada').value,
+        fechaAudiencia: document.getElementById('fechaAudiencia').value,
+        horarioInicio: document.getElementById('horarioInicio').value,
+        horarioFinalizacion: document.getElementById('horarioFinalizacion').value,
+        duracionMinutos: document.getElementById('duracionMinutos').value,
+        cuartoIntermedio: document.getElementById('cuartoIntermedio').value,
+        efectividadAudienciaRealizada: document.getElementById('efectividadAudienciaRealizada').value,
+        estadoAudiencia: document.getElementById('estadoAudiencia').value,
+        motivoCancelacion: document.getElementById('motivoCancelacion').value,
+        nombreJuez: document.getElementById('nombreJuez').value,
+        juezSubrogante: document.getElementById('juezSubrogante').value,
+        observaciones1: document.getElementById('observaciones1').value,
+        observaciones2: document.getElementById('observaciones2').value,
+        coordinador: document.getElementById('coordinador').value,
+        gestor: document.getElementById('gestor').value,
+        operador: document.getElementById('operador').value,
+        limitePlazos: document.getElementById('limitePlazos').value,
+        razones: document.getElementById('razones').value,
+        fechaComision1: document.getElementById('fechaComision1').value,
+        fechaComision2: document.getElementById('fechaComision2').value,
+        detenidosEnPris: document.getElementById('detenidosEnPris').value,
+        tiempoDefensa: document.getElementById('tiempoDefensa').value,
+        tiempoFiscalia: document.getElementById('tiempoFiscalia').value,
+        tiempoJuez: document.getElementById('tiempoJuez').value,
+        cargadoPor: document.getElementById('cargadoPor').value
+      };
+
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        msg.textContent = "¡Formulario guardado con éxito en Excel/Sheets!";
+        msg.className = "mt-4 p-3 bg-green-900 text-green-200 rounded text-center text-sm font-semibold";
+        document.getElementById('formNoco').reset();
+
+      } catch (err) {
+        msg.textContent = "Error al enviar el formulario. Verifica la conexión.";
+        msg.className = "mt-4 p-3 bg-red-900 text-red-200 rounded text-center text-sm font-semibold";
+      } finally {
+        msg.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = "Enviar";
+      }
+    });
+  </script>
+</body>
+</html>
